@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Plug & play basic auth middleware for fastify",
   "main": "index.js",
-  "types": "express-basic-auth.d.ts",
+  "types": "fastify-basic-auth-middleware.d.ts",
   "scripts": {
     "check-dts": "tsc fastify-basic-auth-middleware.d.ts",
     "test": "mocha test.js && npm run check-dts"
