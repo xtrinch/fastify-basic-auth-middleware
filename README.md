@@ -1,4 +1,4 @@
-# fastify-basic-auth
+# fastify-basic-auth-middleware
 
 [![npm version](https://badge.fury.io/js/fastify-basic-auth-middleware.svg)](https://badge.fury.io/js/astify-basic-auth-middleware)
 [![npm](https://img.shields.io/npm/dm/astify-basic-auth-middleware.svg)]()
