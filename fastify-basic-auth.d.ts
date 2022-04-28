@@ -1,6 +1,6 @@
-/// <reference types="express" />
+/// <reference types="fastify" />
 
-import { Request, RequestHandler } from 'express'
+import { FastifyRequest } from 'fastify'
 
 /**
  * This is the middleware builder.
@@ -11,9 +11,9 @@ import { Request, RequestHandler } from 'express'
  *
  * @param options The middleware's options (at least 'users' or 'authorizer' are mandatory).
  */
-declare function expressBasicAuth(options: expressBasicAuth.BasicAuthMiddlewareOptions): RequestHandler
+declare function fastifyBasicAuth(options: fastifyBasicAuth.BasicAuthMiddlewareOptions): any
 
-declare namespace expressBasicAuth {
+declare namespace fastifyBasicAuth {
     /**
      * Time safe string comparison function to protect against timing attacks.
      * 
@@ -37,7 +37,7 @@ declare namespace expressBasicAuth {
     export type BasicAuthMiddlewareOptions = IUsersOptions | (IAuthorizerOptions | IAsyncAuthorizerOptions)
 
     /**
-     * express-basic-auth patches the request object to set an `auth` property that lets you retrieve the authed user.
+     * fastify-basic-auth patches the request object to set an `auth` property that lets you retrieve the authed user.
      *
      * Example (TypeScript):
      *     app.use(basicAuth({ ... }), (req: basicAuth.IBasicAuthedRequest, res, next) => {
@@ -45,7 +45,7 @@ declare namespace expressBasicAuth {
      *         next()
      *     })
      */
-    export interface IBasicAuthedRequest extends Request {
+    export interface IBasicAuthedRequest extends FastifyRequest {
         auth: { user: string, password: string }
     }
 
