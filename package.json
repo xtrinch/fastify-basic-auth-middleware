@@ -1,16 +1,16 @@
 {
-  "name": "express-basic-auth",
-  "version": "1.2.1",
-  "description": "Plug & play basic auth middleware for express",
+  "name": "fastify-basic-auth-middleware",
+  "version": "0.0.1",
+  "description": "Plug & play basic auth middleware for fastify",
   "main": "index.js",
   "types": "express-basic-auth.d.ts",
   "scripts": {
-    "check-dts": "tsc express-basic-auth.d.ts",
+    "check-dts": "tsc fastify-basic-auth.d.ts",
     "test": "mocha test.js && npm run check-dts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LionC/express-basic-auth.git"
+    "url": "git+https://github.com/xtrinch/fastify-basic-auth-middleware.git"
   },
   "keywords": [
     "express",
@@ -20,12 +20,12 @@
     "authentication",
     "http"
   ],
-  "author": "LionC <me@lionc.de>",
+  "author": "LionC <me@lionc.de>, xtrinch <mojca.rojko@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LionC/express-basic-auth/issues"
+    "url": "https://github.com/xtrinch/fastify-basic-auth-middleware/issues"
   },
-  "homepage": "https://github.com/LionC/express-basic-auth#readme",
+  "homepage": "https://github.com/Lxtrinch/fastify-basic-auth-middleware#readme",
   "dependencies": {
     "basic-auth": "^2.0.1"
   },
