@@ -1,20 +1,19 @@
-# express-basic-auth
+# fastify-basic-auth
 
-[![npm version](https://badge.fury.io/js/express-basic-auth.svg)](https://badge.fury.io/js/express-basic-auth)
-[![npm](https://img.shields.io/npm/dm/express-basic-auth.svg)]()
-[![CircleCI](https://circleci.com/gh/LionC/express-basic-auth/tree/master.svg?style=shield&circle-token=74f7b1557100b45259e67d2492c263e4f99365d4)](https://circleci.com/gh/LionC/express-basic-auth/tree/master)
-[![David](https://img.shields.io/david/strongloop/express.svg)]()
+[![npm version](https://badge.fury.io/js/fastify-basic-auth-middleware.svg)](https://badge.fury.io/js/astify-basic-auth-middleware)
+[![npm](https://img.shields.io/npm/dm/astify-basic-auth-middleware.svg)]()
+[![David](https://img.shields.io/david/strongloop/fastify.svg)]()
 ![TypeScript compatible](https://img.shields.io/badge/typescript-compatible-brightgreen.svg)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
-Simple plug & play HTTP basic auth middleware for Express.
+Simple plug & play HTTP basic auth middleware for Fastify.
 
 ## How to install
 
 Just run
 
 ```shell
-npm install express-basic-auth
+npm install fastify-basic-auth-middleware
 ```
 
 ## How to use
@@ -24,7 +23,7 @@ get the middleware:
 
 ```js
 const app = require('express')()
-const basicAuth = require('express-basic-auth')
+const basicAuth = require('fastify-basic-auth-middleware')
 
 app.use(basicAuth({
     users: { 'admin': 'supersecret' }
@@ -158,11 +157,11 @@ The repository contains an `example.js` that you can run to play around and try
 the middleware. To use it just put it somewhere (or leave it where it is), run
 
 ```shell
-npm install express express-basic-auth
+npm install fastify fastify-basic-auth-middleware
 node example.js
 ```
 
-This will start a small express server listening at port 8080. Just look at the file,
+This will start a small fastify server listening at port 8080. Just look at the file,
 try out the requests and play around with the options.
 
 ## TypeScript usage
@@ -170,12 +169,12 @@ try out the requests and play around with the options.
 A declaration file is bundled with the library. You don't have to install a `@types/` package.
 
 ```typescript
-import * as basicAuth from 'express-basic-auth'
+import * as basicAuth from 'fastify-basic-auth-middleware'
 ```
 
 :bulb: **Using `req.auth`**
 
-express-basic-auth sets `req.auth` to an object containing the authorized credentials like `{ user: 'admin', password: 'supersecret' }`.
+fastify-basic-auth-middleware sets `req.auth` to an object containing the authorized credentials like `{ user: 'admin', password: 'supersecret' }`.
 
 In order to use that `req.auth` property in TypeScript without an unknown property error, use covariance to downcast the request type:
 
