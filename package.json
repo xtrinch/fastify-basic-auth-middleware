@@ -1,6 +1,6 @@
 {
   "name": "fastify-basic-auth-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plug & play basic auth middleware for fastify",
   "main": "index.js",
   "types": "fastify-basic-auth-middleware.d.ts",
