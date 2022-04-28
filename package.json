@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "express-basic-auth.d.ts",
   "scripts": {
-    "check-dts": "tsc fastify-basic-auth.d.ts",
+    "check-dts": "tsc fastify-basic-auth-middleware.d.ts",
     "test": "mocha test.js && npm run check-dts"
   },
   "repository": {
